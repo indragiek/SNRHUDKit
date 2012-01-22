@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0392858114CCCBF300D02672 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392858014CCCBF300D02672 /* Cocoa.framework */; };
+		0392858B14CCCBF300D02672 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0392858914CCCBF300D02672 /* InfoPlist.strings */; };
+		0392858F14CCCBF300D02672 /* SNRHUDKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0392858E14CCCBF300D02672 /* SNRHUDKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0392857D14CCCBF300D02672 /* SNRHUDKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SNRHUDKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0392858014CCCBF300D02672 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0392858314CCCBF300D02672 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0392858414CCCBF300D02672 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0392858514CCCBF300D02672 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0392858814CCCBF300D02672 /* SNRHUDKit-Info.plist */ = {isa = PBXFileReference; path = "SNRHUDKit-Info.plist"; sourceTree = "<group>"; };
+		0392858A14CCCBF300D02672 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0392858C14CCCBF300D02672 /* SNRHUDKit-Prefix.pch */ = {isa = PBXFileReference; path = "SNRHUDKit-Prefix.pch"; sourceTree = "<group>"; };
+		0392858D14CCCBF300D02672 /* SNRHUDKit.h */ = {isa = PBXFileReference; path = SNRHUDKit.h; sourceTree = "<group>"; };
+		0392858E14CCCBF300D02672 /* SNRHUDKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNRHUDKit.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0392857914CCCBF300D02672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0392858114CCCBF300D02672 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0392857114CCCBF300D02672 = {
+			isa = PBXGroup;
+			children = (
+				0392858614CCCBF300D02672 /* SNRHUDKit */,
+				0392857F14CCCBF300D02672 /* Frameworks */,
+				0392857E14CCCBF300D02672 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0392857E14CCCBF300D02672 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0392857D14CCCBF300D02672 /* SNRHUDKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0392857F14CCCBF300D02672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0392858014CCCBF300D02672 /* Cocoa.framework */,
+				0392858214CCCBF300D02672 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0392858214CCCBF300D02672 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0392858314CCCBF300D02672 /* AppKit.framework */,
+				0392858414CCCBF300D02672 /* CoreData.framework */,
+				0392858514CCCBF300D02672 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0392858614CCCBF300D02672 /* SNRHUDKit */ = {
+			isa = PBXGroup;
+			children = (
+				0392858D14CCCBF300D02672 /* SNRHUDKit.h */,
+				0392858E14CCCBF300D02672 /* SNRHUDKit.m */,
+				0392858714CCCBF300D02672 /* Supporting Files */,
+			);
+			path = SNRHUDKit;
+			sourceTree = "<group>";
+		};
+		0392858714CCCBF300D02672 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0392858814CCCBF300D02672 /* SNRHUDKit-Info.plist */,
+				0392858914CCCBF300D02672 /* InfoPlist.strings */,
+				0392858C14CCCBF300D02672 /* SNRHUDKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0392857A14CCCBF300D02672 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0392857C14CCCBF300D02672 /* SNRHUDKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0392859214CCCBF300D02672 /* Build configuration list for PBXNativeTarget "SNRHUDKit" */;
+			buildPhases = (
+				0392857814CCCBF300D02672 /* Sources */,
+				0392857914CCCBF300D02672 /* Frameworks */,
+				0392857A14CCCBF300D02672 /* Headers */,
+				0392857B14CCCBF300D02672 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SNRHUDKit;
+			productName = SNRHUDKit;
+			productReference = 0392857D14CCCBF300D02672 /* SNRHUDKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0392857314CCCBF300D02672 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = indragie.com;
+			};
+			buildConfigurationList = 0392857614CCCBF300D02672 /* Build configuration list for PBXProject "SNRHUDKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0392857114CCCBF300D02672;
+			productRefGroup = 0392857E14CCCBF300D02672 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0392857C14CCCBF300D02672 /* SNRHUDKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0392857B14CCCBF300D02672 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0392858B14CCCBF300D02672 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0392857814CCCBF300D02672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0392858F14CCCBF300D02672 /* SNRHUDKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0392858914CCCBF300D02672 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0392858A14CCCBF300D02672 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0392859014CCCBF300D02672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0392859114CCCBF300D02672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0392859314CCCBF300D02672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SNRHUDKit/SNRHUDKit-Prefix.pch";
+				INFOPLIST_FILE = "SNRHUDKit/SNRHUDKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		0392859414CCCBF300D02672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SNRHUDKit/SNRHUDKit-Prefix.pch";
+				INFOPLIST_FILE = "SNRHUDKit/SNRHUDKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0392857614CCCBF300D02672 /* Build configuration list for PBXProject "SNRHUDKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0392859014CCCBF300D02672 /* Debug */,
+				0392859114CCCBF300D02672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0392859214CCCBF300D02672 /* Build configuration list for PBXNativeTarget "SNRHUDKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0392859314CCCBF300D02672 /* Debug */,
+				0392859414CCCBF300D02672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0392857314CCCBF300D02672 /* Project object */;
+}
