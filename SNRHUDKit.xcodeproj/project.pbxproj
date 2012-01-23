@@ -9,20 +9,69 @@
 /* Begin PBXBuildFile section */
 		0392858114CCCBF300D02672 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392858014CCCBF300D02672 /* Cocoa.framework */; };
 		0392858B14CCCBF300D02672 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0392858914CCCBF300D02672 /* InfoPlist.strings */; };
-		0392858F14CCCBF300D02672 /* SNRHUDKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0392858E14CCCBF300D02672 /* SNRHUDKit.m */; };
+		0392859714CCCC4B00D02672 /* SNRHUDSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0392859514CCCC4B00D02672 /* SNRHUDSegmentedControl.h */; };
+		0392859814CCCC4B00D02672 /* SNRHUDSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0392859614CCCC4B00D02672 /* SNRHUDSegmentedControl.m */; };
+		039285B014CCD40500D02672 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392858014CCCBF300D02672 /* Cocoa.framework */; };
+		039285B614CCD40500D02672 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 039285B414CCD40500D02672 /* InfoPlist.strings */; };
+		039285B814CCD40500D02672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285B714CCD40500D02672 /* main.m */; };
+		039285BC14CCD40500D02672 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 039285BA14CCD40500D02672 /* Credits.rtf */; };
+		039285BF14CCD40500D02672 /* SNRHUDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285BE14CCD40500D02672 /* SNRHUDAppDelegate.m */; };
+		039285C214CCD40500D02672 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 039285C014CCD40500D02672 /* MainMenu.xib */; };
+		039285C614CCD42000D02672 /* SNRHUDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392857D14CCCBF300D02672 /* SNRHUDKit.framework */; };
+		039285CA14CCD43D00D02672 /* SNRHUDKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0392857D14CCCBF300D02672 /* SNRHUDKit.framework */; };
+		039285CE14CCE82700D02672 /* NSBezierPath+MCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285CC14CCE82700D02672 /* NSBezierPath+MCAdditions.h */; };
+		039285CF14CCE82700D02672 /* NSBezierPath+MCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285CD14CCE82700D02672 /* NSBezierPath+MCAdditions.m */; };
+		039285D214CCF39B00D02672 /* SNRHUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285D014CCF39B00D02672 /* SNRHUDWindow.h */; };
+		039285D314CCF39B00D02672 /* SNRHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285D114CCF39B00D02672 /* SNRHUDWindow.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		039285C714CCD42900D02672 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0392857314CCCBF300D02672 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0392857C14CCCBF300D02672;
+			remoteInfo = SNRHUDKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		039285C914CCD43300D02672 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				039285CA14CCD43D00D02672 /* SNRHUDKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0392857D14CCCBF300D02672 /* SNRHUDKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SNRHUDKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0392858014CCCBF300D02672 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0392858314CCCBF300D02672 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		0392858414CCCBF300D02672 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0392858514CCCBF300D02672 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		0392858814CCCBF300D02672 /* SNRHUDKit-Info.plist */ = {isa = PBXFileReference; path = "SNRHUDKit-Info.plist"; sourceTree = "<group>"; };
+		0392858814CCCBF300D02672 /* SNRHUDKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SNRHUDKit-Info.plist"; sourceTree = "<group>"; };
 		0392858A14CCCBF300D02672 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0392858C14CCCBF300D02672 /* SNRHUDKit-Prefix.pch */ = {isa = PBXFileReference; path = "SNRHUDKit-Prefix.pch"; sourceTree = "<group>"; };
-		0392858D14CCCBF300D02672 /* SNRHUDKit.h */ = {isa = PBXFileReference; path = SNRHUDKit.h; sourceTree = "<group>"; };
-		0392858E14CCCBF300D02672 /* SNRHUDKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNRHUDKit.m; sourceTree = "<group>"; };
+		0392858C14CCCBF300D02672 /* SNRHUDKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNRHUDKit-Prefix.pch"; sourceTree = "<group>"; };
+		0392858D14CCCBF300D02672 /* SNRHUDKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNRHUDKit.h; sourceTree = "<group>"; };
+		0392859514CCCC4B00D02672 /* SNRHUDSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDSegmentedControl.h; path = Classes/SNRHUDSegmentedControl.h; sourceTree = "<group>"; };
+		0392859614CCCC4B00D02672 /* SNRHUDSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDSegmentedControl.m; path = Classes/SNRHUDSegmentedControl.m; sourceTree = "<group>"; };
+		039285AE14CCD40500D02672 /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		039285B314CCD40500D02672 /* Catalog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Catalog-Info.plist"; sourceTree = "<group>"; };
+		039285B514CCD40500D02672 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		039285B714CCD40500D02672 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		039285B914CCD40500D02672 /* Catalog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Catalog-Prefix.pch"; sourceTree = "<group>"; };
+		039285BB14CCD40500D02672 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		039285BD14CCD40500D02672 /* SNRHUDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNRHUDAppDelegate.h; sourceTree = "<group>"; };
+		039285BE14CCD40500D02672 /* SNRHUDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNRHUDAppDelegate.m; sourceTree = "<group>"; };
+		039285C114CCD40500D02672 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		039285CC14CCE82700D02672 /* NSBezierPath+MCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+MCAdditions.h"; path = "Categories/NSBezierPath+MCAdditions.h"; sourceTree = "<group>"; };
+		039285CD14CCE82700D02672 /* NSBezierPath+MCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBezierPath+MCAdditions.m"; path = "Categories/NSBezierPath+MCAdditions.m"; sourceTree = "<group>"; };
+		039285D014CCF39B00D02672 /* SNRHUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDWindow.h; path = Classes/SNRHUDWindow.h; sourceTree = "<group>"; };
+		039285D114CCF39B00D02672 /* SNRHUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDWindow.m; path = Classes/SNRHUDWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +83,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		039285AB14CCD40500D02672 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039285C614CCD42000D02672 /* SNRHUDKit.framework in Frameworks */,
+				039285B014CCD40500D02672 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0392858614CCCBF300D02672 /* SNRHUDKit */,
+				039285B114CCD40500D02672 /* Catalog (Sample App) */,
 				0392857F14CCCBF300D02672 /* Frameworks */,
 				0392857E14CCCBF300D02672 /* Products */,
 			);
@@ -50,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				0392857D14CCCBF300D02672 /* SNRHUDKit.framework */,
+				039285AE14CCD40500D02672 /* Catalog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				0392858314CCCBF300D02672 /* AppKit.framework */,
-				0392858414CCCBF300D02672 /* CoreData.framework */,
 				0392858514CCCBF300D02672 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
@@ -76,9 +135,13 @@
 		0392858614CCCBF300D02672 /* SNRHUDKit */ = {
 			isa = PBXGroup;
 			children = (
-				0392858D14CCCBF300D02672 /* SNRHUDKit.h */,
-				0392858E14CCCBF300D02672 /* SNRHUDKit.m */,
+				039285CB14CCE7E700D02672 /* Categories */,
 				0392858714CCCBF300D02672 /* Supporting Files */,
+				0392858D14CCCBF300D02672 /* SNRHUDKit.h */,
+				0392859514CCCC4B00D02672 /* SNRHUDSegmentedControl.h */,
+				0392859614CCCC4B00D02672 /* SNRHUDSegmentedControl.m */,
+				039285D014CCF39B00D02672 /* SNRHUDWindow.h */,
+				039285D114CCF39B00D02672 /* SNRHUDWindow.m */,
 			);
 			path = SNRHUDKit;
 			sourceTree = "<group>";
@@ -93,6 +156,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		039285B114CCD40500D02672 /* Catalog (Sample App) */ = {
+			isa = PBXGroup;
+			children = (
+				039285BD14CCD40500D02672 /* SNRHUDAppDelegate.h */,
+				039285BE14CCD40500D02672 /* SNRHUDAppDelegate.m */,
+				039285C014CCD40500D02672 /* MainMenu.xib */,
+				039285B214CCD40500D02672 /* Supporting Files */,
+			);
+			name = "Catalog (Sample App)";
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		039285B214CCD40500D02672 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				039285B314CCD40500D02672 /* Catalog-Info.plist */,
+				039285B414CCD40500D02672 /* InfoPlist.strings */,
+				039285B714CCD40500D02672 /* main.m */,
+				039285B914CCD40500D02672 /* Catalog-Prefix.pch */,
+				039285BA14CCD40500D02672 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		039285CB14CCE7E700D02672 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				039285CC14CCE82700D02672 /* NSBezierPath+MCAdditions.h */,
+				039285CD14CCE82700D02672 /* NSBezierPath+MCAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -100,6 +196,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0392859714CCCC4B00D02672 /* SNRHUDSegmentedControl.h in Headers */,
+				039285CE14CCE82700D02672 /* NSBezierPath+MCAdditions.h in Headers */,
+				039285D214CCF39B00D02672 /* SNRHUDWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +223,25 @@
 			productReference = 0392857D14CCCBF300D02672 /* SNRHUDKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		039285AD14CCD40500D02672 /* Catalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 039285C314CCD40500D02672 /* Build configuration list for PBXNativeTarget "Catalog" */;
+			buildPhases = (
+				039285AA14CCD40500D02672 /* Sources */,
+				039285AB14CCD40500D02672 /* Frameworks */,
+				039285AC14CCD40500D02672 /* Resources */,
+				039285C914CCD43300D02672 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				039285C814CCD42900D02672 /* PBXTargetDependency */,
+			);
+			name = Catalog;
+			productName = Catalog;
+			productReference = 039285AE14CCD40500D02672 /* Catalog.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,6 +264,7 @@
 			projectRoot = "";
 			targets = (
 				0392857C14CCCBF300D02672 /* SNRHUDKit */,
+				039285AD14CCD40500D02672 /* Catalog */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +278,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		039285AC14CCD40500D02672 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039285B614CCD40500D02672 /* InfoPlist.strings in Resources */,
+				039285BC14CCD40500D02672 /* Credits.rtf in Resources */,
+				039285C214CCD40500D02672 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -166,11 +295,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0392858F14CCCBF300D02672 /* SNRHUDKit.m in Sources */,
+				0392859814CCCC4B00D02672 /* SNRHUDSegmentedControl.m in Sources */,
+				039285CF14CCE82700D02672 /* NSBezierPath+MCAdditions.m in Sources */,
+				039285D314CCF39B00D02672 /* SNRHUDWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		039285AA14CCD40500D02672 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039285B814CCD40500D02672 /* main.m in Sources */,
+				039285BF14CCD40500D02672 /* SNRHUDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		039285C814CCD42900D02672 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0392857C14CCCBF300D02672 /* SNRHUDKit */;
+			targetProxy = 039285C714CCD42900D02672 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0392858914CCCBF300D02672 /* InfoPlist.strings */ = {
@@ -179,6 +327,30 @@
 				0392858A14CCCBF300D02672 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		039285B414CCD40500D02672 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				039285B514CCD40500D02672 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		039285BA14CCD40500D02672 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				039285BB14CCD40500D02672 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		039285C014CCD40500D02672 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				039285C114CCD40500D02672 /* en */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -259,6 +431,28 @@
 			};
 			name = Release;
 		};
+		039285C414CCD40500D02672 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Catalog/Catalog-Prefix.pch";
+				INFOPLIST_FILE = "Catalog/Catalog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		039285C514CCD40500D02672 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Catalog/Catalog-Prefix.pch";
+				INFOPLIST_FILE = "Catalog/Catalog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -276,6 +470,14 @@
 			buildConfigurations = (
 				0392859314CCCBF300D02672 /* Debug */,
 				0392859414CCCBF300D02672 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		039285C314CCD40500D02672 /* Build configuration list for PBXNativeTarget "Catalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				039285C414CCD40500D02672 /* Debug */,
+				039285C514CCD40500D02672 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
