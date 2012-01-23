@@ -11,7 +11,10 @@ As of Xcode 4, IBPlugins are no longer supported. Therefore, you will need to ei
 `SNRHUDKit` is nowhere near complete at this time. The only controls/elements that have been at least partially implemented are:
 
 * Window (`SNRHUDWindow`)
-* Segmented control (`SNRHUDSegmentedControl`)
+* Segmented control (`SNRHUDSegmentedCell`)
+* Text view (`SNRHUDTextView`)
+* Basic rounded button (`SNRHUDButtonCell`)
+* Text field (`SNRHUDTextFieldCell`)
 
 Here's a mockup of what the complete set of elements will look like:
 

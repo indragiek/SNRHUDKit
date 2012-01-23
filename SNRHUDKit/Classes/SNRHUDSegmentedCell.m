@@ -1,12 +1,12 @@
 //
-//  SNRHUDSegmentedControl.m
+//  SNRHUDSegmentedCell.m
 //  SNRHUDKit
 //
 //  Created by Indragie Karunaratne on 12-01-22.
 //  Copyright (c) 2012 indragie.com. All rights reserved.
 //
 
-#import "SNRHUDSegmentedControl.h"
+#import "SNRHUDSegmentedCell.h"
 #import "NSBezierPath+MCAdditions.h"
 
 #define SNRSegControlGradientBottomColor         [NSColor colorWithDeviceWhite:0.150 alpha:1.000]
@@ -17,7 +17,7 @@
 #define SNRSegControlDividerGradientBottomColor  [NSColor colorWithDeviceWhite:0.120 alpha:1.000]
 #define SNRSegControlDividerGradientTopColor     [NSColor colorWithDeviceWhite:0.160 alpha:1.000]
 
-#define SNRSegControlHighlightColor              [NSColor colorWithDeviceWhite:1.000 alpha:0.100]
+#define SNRSegControlHighlightColor              [NSColor colorWithDeviceWhite:1.000 alpha:0.050]
 #define SNRSegControlHighlightOverlayColor       [NSColor colorWithDeviceWhite:0.000 alpha:0.300]
 #define SNRSegControlBorderColor                 [NSColor blackColor]
 #define SNRSegControlCornerRadius                3.f
@@ -38,18 +38,11 @@
 #define SNRSegControlTextShadowBlurRadius        1.f
 #define SNRSegControlTextShadowColor             [NSColor blackColor]
 
+#define SNRSegControlDisabledAlpha               0.7f
+
 // This is a value that is set internally by AppKit, used for layout purposes in this code
 // Don't change this
 #define SNRSegControlDivderWidth 3.f
-
-@implementation SNRHUDSegmentedControl
-
-// Doesn't seem to work when the control is created from Interface Builder
-+ (Class)cellClass
-{
-    return [SNRHUDSegmentedCell class];
-}
-@end
 
 @interface SNRHUDSegmentedCell ()
 // Returns the bezier path that the border was drawn in
@@ -62,6 +55,10 @@
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
+    CGContextRef ctx = [[NSGraphicsContext currentContext] graphicsPort];
+    if (![self isEnabled]) {
+        CGContextSetAlpha(ctx, SNRSegControlDisabledAlpha);
+    }
     // The frame needs to be inset 0.5px to make the border line crisp
     // because NSBezierPath draws the stroke centered on the bounds of the rect
     // This means that 0.5px of the 1px stroke line will be outside the rect and the other half will be inside
@@ -83,7 +80,12 @@
             width += SNRSegControlDivderWidth;
         }
         NSRect frame = NSMakeRect(bounds.origin.x + currentOrigin, bounds.origin.y, width, bounds.size.height);
+        [NSGraphicsContext saveGraphicsState];
+        if ([self isEnabled] && ![self isEnabledForSegment:i]) {
+            CGContextSetAlpha(ctx, SNRSegControlDisabledAlpha);
+        }
         [self drawSegment:i inFrame:frame withView:controlView];
+        [NSGraphicsContext restoreGraphicsState];
         currentOrigin += width;
     }
 }
@@ -135,7 +137,7 @@
         [path fillWithInnerShadow:innerShadow];
     }
     [self snr_drawInteriorOfSegment:segment inFrame:frame];
-    NSEvent *currentEvent = [NSApp currentEvent]; // This is probably a dirty way of doing this
+    NSEvent *currentEvent = [NSApp currentEvent]; // This is probably a dirty way of figuring out whether to highlight
     if (currentEvent.type == NSLeftMouseDown) {
         NSPoint location = [controlView convertPoint:[currentEvent locationInWindow] fromView:nil];
         if (NSPointInRect(location, frame)) {

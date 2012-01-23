@@ -7,7 +7,6 @@
 
 #import "NSBezierPath+MCAdditions.h"
 
-
 @implementation NSBezierPath (MCAdditions)
 
 - (void)fillWithInnerShadow:(NSShadow *)shadow

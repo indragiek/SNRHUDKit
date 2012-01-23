@@ -1,5 +1,5 @@
 //
-//  SNRHUDSegmentedControl.h
+//  SNRHUDSegmentedCell.h
 //  SNRHUDKit
 //
 //  Created by Indragie Karunaratne on 12-01-22.
@@ -10,10 +10,6 @@
 
 // TODO: Flexible automatic widths (fixed widths are required right now)
 // TODO: Drawing images
-
-@interface SNRHUDSegmentedControl : NSSegmentedControl
-
-@end
 
 @interface SNRHUDSegmentedCell : NSSegmentedCell
 

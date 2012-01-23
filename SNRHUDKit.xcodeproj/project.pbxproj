@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0392858114CCCBF300D02672 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392858014CCCBF300D02672 /* Cocoa.framework */; };
 		0392858B14CCCBF300D02672 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0392858914CCCBF300D02672 /* InfoPlist.strings */; };
-		0392859714CCCC4B00D02672 /* SNRHUDSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0392859514CCCC4B00D02672 /* SNRHUDSegmentedControl.h */; };
-		0392859814CCCC4B00D02672 /* SNRHUDSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0392859614CCCC4B00D02672 /* SNRHUDSegmentedControl.m */; };
+		0392859714CCCC4B00D02672 /* SNRHUDSegmentedCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0392859514CCCC4B00D02672 /* SNRHUDSegmentedCell.h */; };
+		0392859814CCCC4B00D02672 /* SNRHUDSegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0392859614CCCC4B00D02672 /* SNRHUDSegmentedCell.m */; };
 		039285B014CCD40500D02672 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392858014CCCBF300D02672 /* Cocoa.framework */; };
 		039285B614CCD40500D02672 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 039285B414CCD40500D02672 /* InfoPlist.strings */; };
 		039285B814CCD40500D02672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285B714CCD40500D02672 /* main.m */; };
@@ -23,6 +23,16 @@
 		039285CF14CCE82700D02672 /* NSBezierPath+MCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285CD14CCE82700D02672 /* NSBezierPath+MCAdditions.m */; };
 		039285D214CCF39B00D02672 /* SNRHUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285D014CCF39B00D02672 /* SNRHUDWindow.h */; };
 		039285D314CCF39B00D02672 /* SNRHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285D114CCF39B00D02672 /* SNRHUDWindow.m */; };
+		039285D614CDE58800D02672 /* SNRHUDTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285D414CDE58700D02672 /* SNRHUDTextFieldCell.h */; };
+		039285D714CDE58800D02672 /* SNRHUDTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285D514CDE58800D02672 /* SNRHUDTextFieldCell.m */; };
+		039285E514CE007100D02672 /* SNRHUDButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285E314CE007100D02672 /* SNRHUDButtonCell.h */; };
+		039285E614CE007100D02672 /* SNRHUDButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285E414CE007100D02672 /* SNRHUDButtonCell.m */; };
+		039285E914CE0B4300D02672 /* SNRHUDTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285E714CE0B4200D02672 /* SNRHUDTextView.h */; };
+		039285EA14CE0B4300D02672 /* SNRHUDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285E814CE0B4300D02672 /* SNRHUDTextView.m */; };
+		039285ED14CE0B8600D02672 /* SNRHUDScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285EB14CE0B8500D02672 /* SNRHUDScrollView.h */; };
+		039285EE14CE0B8600D02672 /* SNRHUDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285EC14CE0B8500D02672 /* SNRHUDScrollView.m */; };
+		039285F114CE0C1100D02672 /* SNRHUDImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285EF14CE0C1000D02672 /* SNRHUDImageCell.h */; };
+		039285F214CE0C1100D02672 /* SNRHUDImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285F014CE0C1000D02672 /* SNRHUDImageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +67,8 @@
 		0392858A14CCCBF300D02672 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0392858C14CCCBF300D02672 /* SNRHUDKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNRHUDKit-Prefix.pch"; sourceTree = "<group>"; };
 		0392858D14CCCBF300D02672 /* SNRHUDKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNRHUDKit.h; sourceTree = "<group>"; };
-		0392859514CCCC4B00D02672 /* SNRHUDSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDSegmentedControl.h; path = Classes/SNRHUDSegmentedControl.h; sourceTree = "<group>"; };
-		0392859614CCCC4B00D02672 /* SNRHUDSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDSegmentedControl.m; path = Classes/SNRHUDSegmentedControl.m; sourceTree = "<group>"; };
+		0392859514CCCC4B00D02672 /* SNRHUDSegmentedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDSegmentedCell.h; path = Classes/SNRHUDSegmentedCell.h; sourceTree = "<group>"; };
+		0392859614CCCC4B00D02672 /* SNRHUDSegmentedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDSegmentedCell.m; path = Classes/SNRHUDSegmentedCell.m; sourceTree = "<group>"; };
 		039285AE14CCD40500D02672 /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039285B314CCD40500D02672 /* Catalog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Catalog-Info.plist"; sourceTree = "<group>"; };
 		039285B514CCD40500D02672 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -72,6 +82,16 @@
 		039285CD14CCE82700D02672 /* NSBezierPath+MCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBezierPath+MCAdditions.m"; path = "Categories/NSBezierPath+MCAdditions.m"; sourceTree = "<group>"; };
 		039285D014CCF39B00D02672 /* SNRHUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDWindow.h; path = Classes/SNRHUDWindow.h; sourceTree = "<group>"; };
 		039285D114CCF39B00D02672 /* SNRHUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDWindow.m; path = Classes/SNRHUDWindow.m; sourceTree = "<group>"; };
+		039285D414CDE58700D02672 /* SNRHUDTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDTextFieldCell.h; path = Classes/SNRHUDTextFieldCell.h; sourceTree = "<group>"; };
+		039285D514CDE58800D02672 /* SNRHUDTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDTextFieldCell.m; path = Classes/SNRHUDTextFieldCell.m; sourceTree = "<group>"; };
+		039285E314CE007100D02672 /* SNRHUDButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDButtonCell.h; path = Classes/SNRHUDButtonCell.h; sourceTree = "<group>"; };
+		039285E414CE007100D02672 /* SNRHUDButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDButtonCell.m; path = Classes/SNRHUDButtonCell.m; sourceTree = "<group>"; };
+		039285E714CE0B4200D02672 /* SNRHUDTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDTextView.h; path = Classes/SNRHUDTextView.h; sourceTree = "<group>"; };
+		039285E814CE0B4300D02672 /* SNRHUDTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDTextView.m; path = Classes/SNRHUDTextView.m; sourceTree = "<group>"; };
+		039285EB14CE0B8500D02672 /* SNRHUDScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDScrollView.h; path = Classes/SNRHUDScrollView.h; sourceTree = "<group>"; };
+		039285EC14CE0B8500D02672 /* SNRHUDScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDScrollView.m; path = Classes/SNRHUDScrollView.m; sourceTree = "<group>"; };
+		039285EF14CE0C1000D02672 /* SNRHUDImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNRHUDImageCell.h; path = Classes/SNRHUDImageCell.h; sourceTree = "<group>"; };
+		039285F014CE0C1000D02672 /* SNRHUDImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNRHUDImageCell.m; path = Classes/SNRHUDImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +158,20 @@
 				039285CB14CCE7E700D02672 /* Categories */,
 				0392858714CCCBF300D02672 /* Supporting Files */,
 				0392858D14CCCBF300D02672 /* SNRHUDKit.h */,
-				0392859514CCCC4B00D02672 /* SNRHUDSegmentedControl.h */,
-				0392859614CCCC4B00D02672 /* SNRHUDSegmentedControl.m */,
+				0392859514CCCC4B00D02672 /* SNRHUDSegmentedCell.h */,
+				0392859614CCCC4B00D02672 /* SNRHUDSegmentedCell.m */,
+				039285D414CDE58700D02672 /* SNRHUDTextFieldCell.h */,
+				039285D514CDE58800D02672 /* SNRHUDTextFieldCell.m */,
 				039285D014CCF39B00D02672 /* SNRHUDWindow.h */,
 				039285D114CCF39B00D02672 /* SNRHUDWindow.m */,
+				039285E314CE007100D02672 /* SNRHUDButtonCell.h */,
+				039285E414CE007100D02672 /* SNRHUDButtonCell.m */,
+				039285E714CE0B4200D02672 /* SNRHUDTextView.h */,
+				039285E814CE0B4300D02672 /* SNRHUDTextView.m */,
+				039285EB14CE0B8500D02672 /* SNRHUDScrollView.h */,
+				039285EC14CE0B8500D02672 /* SNRHUDScrollView.m */,
+				039285EF14CE0C1000D02672 /* SNRHUDImageCell.h */,
+				039285F014CE0C1000D02672 /* SNRHUDImageCell.m */,
 			);
 			path = SNRHUDKit;
 			sourceTree = "<group>";
@@ -196,9 +226,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0392859714CCCC4B00D02672 /* SNRHUDSegmentedControl.h in Headers */,
+				0392859714CCCC4B00D02672 /* SNRHUDSegmentedCell.h in Headers */,
 				039285CE14CCE82700D02672 /* NSBezierPath+MCAdditions.h in Headers */,
 				039285D214CCF39B00D02672 /* SNRHUDWindow.h in Headers */,
+				039285D614CDE58800D02672 /* SNRHUDTextFieldCell.h in Headers */,
+				039285E514CE007100D02672 /* SNRHUDButtonCell.h in Headers */,
+				039285E914CE0B4300D02672 /* SNRHUDTextView.h in Headers */,
+				039285ED14CE0B8600D02672 /* SNRHUDScrollView.h in Headers */,
+				039285F114CE0C1100D02672 /* SNRHUDImageCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,9 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0392859814CCCC4B00D02672 /* SNRHUDSegmentedControl.m in Sources */,
+				0392859814CCCC4B00D02672 /* SNRHUDSegmentedCell.m in Sources */,
 				039285CF14CCE82700D02672 /* NSBezierPath+MCAdditions.m in Sources */,
 				039285D314CCF39B00D02672 /* SNRHUDWindow.m in Sources */,
+				039285D714CDE58800D02672 /* SNRHUDTextFieldCell.m in Sources */,
+				039285E614CE007100D02672 /* SNRHUDButtonCell.m in Sources */,
+				039285EA14CE0B4300D02672 /* SNRHUDTextView.m in Sources */,
+				039285EE14CE0B8600D02672 /* SNRHUDScrollView.m in Sources */,
+				039285F214CE0C1100D02672 /* SNRHUDImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
