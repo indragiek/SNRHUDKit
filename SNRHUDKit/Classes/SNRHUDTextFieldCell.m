@@ -24,6 +24,7 @@
 #define SNRTextFieldDropShadowColor             [NSColor colorWithDeviceWhite:1.000 alpha:0.100]
 
 #define SNRTextFieldDisabledAlpha               0.7f
+#define SNRTextFieldTextVerticalOffset          1.f
 
 @implementation SNRHUDTextFieldCell
 
@@ -80,7 +81,7 @@
     
     // Draw the text vertically centered
     NSSize textSize = [self cellSizeForBounds:cellFrame];
-    NSRect textRect = NSMakeRect(backgroundRect.origin.x, NSMidY(backgroundRect) - (textSize.height / 2.f), backgroundRect.size.width, textSize.height);
+    NSRect textRect = NSMakeRect(backgroundRect.origin.x, round(NSMidY(backgroundRect) - (textSize.height / 2.f)) - SNRTextFieldTextVerticalOffset, backgroundRect.size.width, textSize.height);
     [self drawInteriorWithFrame:textRect inView:controlView];
 }
 @end

@@ -36,6 +36,10 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 
 @interface SNRHUDButtonCell ()
 - (BOOL)snr_shouldDrawBlueButton;
+- (void)snr_drawButtonBezelWithFrame:(NSRect)frame inView:(NSView*)controlView;
+- (void)snr_drawCheckboxBezelWithFrame:(NSRect)frame inView:(NSView*)controlView;
+- (NSRect)snr_drawButtonTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView;
+- (NSRect)snr_drawCheckboxTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView;
 @end
 
 @implementation SNRHUDButtonCell {
@@ -55,6 +59,16 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 }
 
 - (void)drawBezelWithFrame:(NSRect)frame inView:(NSView *)controlView
+{
+    [self snr_drawButtonBezelWithFrame:frame inView:controlView];
+}
+
+- (NSRect)drawTitle:(NSAttributedString *)title withFrame:(NSRect)frame inView:(NSView *)controlView
+{
+    return [self snr_drawButtonTitle:title withFrame:frame inView:controlView];
+}
+
+- (void)snr_drawButtonBezelWithFrame:(NSRect)frame inView:(NSView*)controlView
 {
     frame = NSInsetRect(frame, 0.5f, 0.5f);
     frame.size.height -= SNRButtonDropShadowBlurRadius;
@@ -87,7 +101,12 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
     [NSGraphicsContext restoreGraphicsState];
 }
 
-- (NSRect)drawTitle:(NSAttributedString *)title withFrame:(NSRect)frame inView:(NSView *)controlView
+- (void)snr_drawCheckboxBezelWithFrame:(NSRect)frame inView:(NSView*)controlView
+{
+    
+}
+
+- (NSRect)snr_drawButtonTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView
 {
     BOOL blue = [self snr_shouldDrawBlueButton];
     NSString *label = [title string];
@@ -101,6 +120,11 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
     NSRect labelRect = NSMakeRect(NSMidX(frame) - (labelSize.width / 2.f), NSMidY(frame) - (labelSize.height / 2.f), labelSize.width, labelSize.height);
     [attrLabel drawInRect:NSIntegralRect(labelRect)];
     return labelRect;
+}
+
+- (NSRect)snr_drawCheckboxTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView
+{
+    
 }
 
 #pragma mark - Private

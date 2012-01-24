@@ -1400,10 +1400,9 @@
 						<object class="NSButton" id="887948449">
 							<reference key="NSNextResponder" ref="616882760"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{188, 20}, {82, 23}}</string>
+							<string key="NSFrame">{{96, 20}, {82, 23}}</string>
 							<reference key="NSSuperview" ref="616882760"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:2510</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="372624357">
@@ -1428,7 +1427,7 @@
 						<object class="NSButton" id="49079046">
 							<reference key="NSNextResponder" ref="616882760"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{96, 20}, {82, 23}}</string>
+							<string key="NSFrame">{{188, 20}, {82, 23}}</string>
 							<reference key="NSSuperview" ref="616882760"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="887948449"/>
@@ -1482,7 +1481,7 @@
 											<string key="NSFrameSize">{248, 133}</string>
 											<reference key="NSSuperview" ref="727247371"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="608436794"/>
+											<reference key="NSNextKeyView" ref="931446201"/>
 											<string key="NSReuseIdentifierKey">_NS:1480</string>
 											<object class="NSTextContainer" key="NSTextContainer" id="1022982741">
 												<object class="NSLayoutManager" key="NSLayoutManager">
@@ -1610,7 +1609,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							<string key="NSFrame">{{20, 73}, {250, 135}}</string>
 							<reference key="NSSuperview" ref="616882760"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="931446201"/>
+							<reference key="NSNextKeyView" ref="727247371"/>
 							<string key="NSReuseIdentifierKey">_NS:940</string>
 							<int key="NSsFlags">133138</int>
 							<reference key="NSVScroller" ref="608436794"/>
@@ -3314,9 +3313,9 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 						<array class="NSMutableArray" key="children">
 							<reference ref="725209211"/>
 							<reference ref="244134406"/>
-							<reference ref="887948449"/>
-							<reference ref="49079046"/>
 							<reference ref="370655449"/>
+							<reference ref="49079046"/>
+							<reference ref="887948449"/>
 						</array>
 						<reference key="parent" ref="657836172"/>
 					</object>
@@ -3577,7 +3576,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">554</int>
+			<int key="maxID">563</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
