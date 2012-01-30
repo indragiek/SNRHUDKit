@@ -32,6 +32,15 @@
 #define SNRButtonBorderColor                      [NSColor blackColor]
 #define SNRButtonHighlightOverlayColor            [NSColor colorWithDeviceWhite:0.000 alpha:0.300]
 
+#define SNRButtonCheckboxTextOffset               5.f
+#define SNRButtonCheckboxCheckmarkColor           [NSColor colorWithDeviceWhite:0.780 alpha:1.000]
+#define SNRButtonCheckboxCheckmarkLeftOffset      4.f
+#define SNRButtonCheckboxCheckmarkTopOffset       2.f
+#define SNRButtonCheckboxCheckmarkShadowOffset    NSMakeSize(0.f, 0.f)
+#define SNRButtonCheckboxCheckmarkShadowBlurRadius 3.f
+#define SNRButtonCheckboxCheckmarkShadowColor     [NSColor colorWithDeviceWhite:0.000 alpha:0.750]
+#define SNRButtonCheckboxCheckmarkLineWidth       2.f
+
 static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 
 @interface SNRHUDButtonCell ()
@@ -40,10 +49,26 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 - (void)snr_drawCheckboxBezelWithFrame:(NSRect)frame inView:(NSView*)controlView;
 - (NSRect)snr_drawButtonTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView;
 - (NSRect)snr_drawCheckboxTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView;
+- (NSBezierPath *)snr_checkmarkPathForRect:(NSRect)rect mixed:(BOOL)mixed;
 @end
 
 @implementation SNRHUDButtonCell {
     NSBezierPath *__bezelPath;
+    NSButtonType __buttonType;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder])) {
+        __buttonType = (NSButtonType)[[self valueForKey:@"buttonType"] unsignedIntegerValue];
+    }
+    return self;
+}
+
+- (void)setButtonType:(NSButtonType)aType
+{
+    __buttonType = aType;
+    [super setButtonType:aType];
 }
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
@@ -65,7 +90,21 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 
 - (NSRect)drawTitle:(NSAttributedString *)title withFrame:(NSRect)frame inView:(NSView *)controlView
 {
-    return [self snr_drawButtonTitle:title withFrame:frame inView:controlView];
+    switch (__buttonType) {
+        case NSSwitchButton:
+            return [self snr_drawCheckboxTitle:title withFrame:frame inView:controlView];
+            break;
+        default:
+            return [self snr_drawButtonTitle:title withFrame:frame inView:controlView];
+            break;
+    }
+}
+
+- (void)drawImage:(NSImage *)image withFrame:(NSRect)frame inView:(NSView *)controlView
+{
+    if (__buttonType == NSSwitchButton) {
+        [self snr_drawCheckboxBezelWithFrame:frame inView:controlView];
+    }
 }
 
 - (void)snr_drawButtonBezelWithFrame:(NSRect)frame inView:(NSView*)controlView
@@ -103,7 +142,40 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 
 - (void)snr_drawCheckboxBezelWithFrame:(NSRect)frame inView:(NSView*)controlView
 {
-    
+    // At this time the checkbox uses the same style as the black button so we can use that method to draw the background
+    [self snr_drawButtonBezelWithFrame:frame inView:controlView];
+    // Draw the checkmark itself
+    if ([self state] == NSOffState) { return; }
+    NSBezierPath *path = [self snr_checkmarkPathForRect:frame mixed:[self state] == NSMixedState];
+    [path setLineWidth:SNRButtonCheckboxCheckmarkLineWidth];
+    [SNRButtonCheckboxCheckmarkColor set];
+    NSShadow *shadow = [NSShadow new];
+    [shadow setShadowColor:SNRButtonCheckboxCheckmarkShadowColor];
+    [shadow setShadowBlurRadius:SNRButtonCheckboxCheckmarkShadowBlurRadius];
+    [shadow setShadowOffset:SNRButtonCheckboxCheckmarkShadowOffset];
+    [NSGraphicsContext saveGraphicsState];
+    [shadow set];
+    [path stroke];
+    [NSGraphicsContext restoreGraphicsState];
+}
+
+- (NSBezierPath *)snr_checkmarkPathForRect:(NSRect)rect mixed:(BOOL)mixed
+{
+    NSBezierPath *path = [NSBezierPath bezierPath];
+    if (mixed) {
+        NSPoint left = NSMakePoint(rect.origin.x + SNRButtonCheckboxCheckmarkLeftOffset, round(NSMidY(rect)));
+        NSPoint right = NSMakePoint(NSMaxX(rect) - SNRButtonCheckboxCheckmarkLeftOffset, left.y);
+        [path moveToPoint:left];
+        [path lineToPoint:right];
+    } else {
+        NSPoint top = NSMakePoint(NSMaxX(rect), rect.origin.y);
+        NSPoint bottom = NSMakePoint(round(NSMidX(rect)), round(NSMidY(rect)) + SNRButtonCheckboxCheckmarkTopOffset);
+        NSPoint left = NSMakePoint(rect.origin.x + SNRButtonCheckboxCheckmarkLeftOffset, round(bottom.y / 2.f));
+        [path moveToPoint:top];
+        [path lineToPoint:bottom];
+        [path lineToPoint:left];
+    }
+    return path;
 }
 
 - (NSRect)snr_drawButtonTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView
@@ -124,13 +196,23 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 
 - (NSRect)snr_drawCheckboxTitle:(NSAttributedString*)title withFrame:(NSRect)frame inView:(NSView*)controlView
 {
-    
+    NSString *label = [title string];
+    NSShadow *textShadow = [NSShadow new];
+    [textShadow setShadowOffset:SNRButtonBlackTextShadowOffset];
+    [textShadow setShadowColor:SNRButtonBlackTextShadowColor];
+    [textShadow setShadowBlurRadius:SNRButtonBlackTextShadowBlurRadius];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:SNRButtonTextFont, NSFontAttributeName, SNRButtonTextColor, NSForegroundColorAttributeName, textShadow, NSShadowAttributeName, nil];
+    NSAttributedString *attrLabel = [[NSAttributedString alloc] initWithString:label attributes:attributes];
+    NSSize labelSize = attrLabel.size;
+    NSRect labelRect = NSMakeRect(frame.origin.x + SNRButtonCheckboxTextOffset, NSMidY(frame) - (labelSize.height / 2.f), labelSize.width, labelSize.height);
+    [attrLabel drawInRect:NSIntegralRect(labelRect)];
+    return labelRect;
 }
 
 #pragma mark - Private
 
 - (BOOL)snr_shouldDrawBlueButton
 {
-    return [[self keyEquivalent] isEqualToString:SNRButtonReturnKeyEquivalent];
+    return [[self keyEquivalent] isEqualToString:SNRButtonReturnKeyEquivalent] && (__buttonType != NSSwitchButton);
 }
 @end
