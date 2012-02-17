@@ -32,10 +32,10 @@
 #define SNRButtonBorderColor                      [NSColor blackColor]
 #define SNRButtonHighlightOverlayColor            [NSColor colorWithDeviceWhite:0.000 alpha:0.300]
 
-#define SNRButtonCheckboxTextOffset               5.f
+#define SNRButtonCheckboxTextOffset               3.f
 #define SNRButtonCheckboxCheckmarkColor           [NSColor colorWithDeviceWhite:0.780 alpha:1.000]
 #define SNRButtonCheckboxCheckmarkLeftOffset      4.f
-#define SNRButtonCheckboxCheckmarkTopOffset       2.f
+#define SNRButtonCheckboxCheckmarkTopOffset       1.f
 #define SNRButtonCheckboxCheckmarkShadowOffset    NSMakeSize(0.f, 0.f)
 #define SNRButtonCheckboxCheckmarkShadowBlurRadius 3.f
 #define SNRButtonCheckboxCheckmarkShadowColor     [NSColor colorWithDeviceWhite:0.000 alpha:0.750]
@@ -143,6 +143,8 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 - (void)snr_drawCheckboxBezelWithFrame:(NSRect)frame inView:(NSView*)controlView
 {
     // At this time the checkbox uses the same style as the black button so we can use that method to draw the background
+    frame.size.width -= 2.f;
+    frame.size.height -= 1.f;
     [self snr_drawButtonBezelWithFrame:frame inView:controlView];
     // Draw the checkmark itself
     if ([self state] == NSOffState) { return; }

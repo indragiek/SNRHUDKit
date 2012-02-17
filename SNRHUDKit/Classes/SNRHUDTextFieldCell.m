@@ -23,7 +23,11 @@
 
 #define SNRTextFieldDropShadowColor             [NSColor colorWithDeviceWhite:1.000 alpha:0.100]
 
-#define SNRTextFieldDisabledAlpha               0.7f
+#define SNRTextFieldTextShadowColor             [NSColor colorWithDeviceWhite:0.000 alpha:0.750]
+#define SNRTextFieldTextShadowBlurRadius        3.f
+#define SNRTextFieldTextShadowOffset            NSMakeSize(0.f, 0.f)
+
+#define SNRTextFieldDisabledAlpha               0.5f
 #define SNRTextFieldTextVerticalOffset          1.f
 
 @implementation SNRHUDTextFieldCell

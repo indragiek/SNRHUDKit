@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0392858114CCCBF300D02672 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392858014CCCBF300D02672 /* Cocoa.framework */; };
 		0392858B14CCCBF300D02672 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0392858914CCCBF300D02672 /* InfoPlist.strings */; };
-		0392859714CCCC4B00D02672 /* SNRHUDSegmentedCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0392859514CCCC4B00D02672 /* SNRHUDSegmentedCell.h */; };
+		0392859714CCCC4B00D02672 /* SNRHUDSegmentedCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0392859514CCCC4B00D02672 /* SNRHUDSegmentedCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0392859814CCCC4B00D02672 /* SNRHUDSegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0392859614CCCC4B00D02672 /* SNRHUDSegmentedCell.m */; };
 		039285B014CCD40500D02672 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392858014CCCBF300D02672 /* Cocoa.framework */; };
 		039285B614CCD40500D02672 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 039285B414CCD40500D02672 /* InfoPlist.strings */; };
@@ -19,19 +19,19 @@
 		039285C214CCD40500D02672 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 039285C014CCD40500D02672 /* MainMenu.xib */; };
 		039285C614CCD42000D02672 /* SNRHUDKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392857D14CCCBF300D02672 /* SNRHUDKit.framework */; };
 		039285CA14CCD43D00D02672 /* SNRHUDKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0392857D14CCCBF300D02672 /* SNRHUDKit.framework */; };
-		039285CE14CCE82700D02672 /* NSBezierPath+MCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285CC14CCE82700D02672 /* NSBezierPath+MCAdditions.h */; };
+		039285CE14CCE82700D02672 /* NSBezierPath+MCAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285CC14CCE82700D02672 /* NSBezierPath+MCAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		039285CF14CCE82700D02672 /* NSBezierPath+MCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285CD14CCE82700D02672 /* NSBezierPath+MCAdditions.m */; };
-		039285D214CCF39B00D02672 /* SNRHUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285D014CCF39B00D02672 /* SNRHUDWindow.h */; };
+		039285D214CCF39B00D02672 /* SNRHUDWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285D014CCF39B00D02672 /* SNRHUDWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		039285D314CCF39B00D02672 /* SNRHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285D114CCF39B00D02672 /* SNRHUDWindow.m */; };
-		039285D614CDE58800D02672 /* SNRHUDTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285D414CDE58700D02672 /* SNRHUDTextFieldCell.h */; };
+		039285D614CDE58800D02672 /* SNRHUDTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285D414CDE58700D02672 /* SNRHUDTextFieldCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		039285D714CDE58800D02672 /* SNRHUDTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285D514CDE58800D02672 /* SNRHUDTextFieldCell.m */; };
-		039285E514CE007100D02672 /* SNRHUDButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285E314CE007100D02672 /* SNRHUDButtonCell.h */; };
+		039285E514CE007100D02672 /* SNRHUDButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285E314CE007100D02672 /* SNRHUDButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		039285E614CE007100D02672 /* SNRHUDButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285E414CE007100D02672 /* SNRHUDButtonCell.m */; };
-		039285E914CE0B4300D02672 /* SNRHUDTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285E714CE0B4200D02672 /* SNRHUDTextView.h */; };
+		039285E914CE0B4300D02672 /* SNRHUDTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285E714CE0B4200D02672 /* SNRHUDTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		039285EA14CE0B4300D02672 /* SNRHUDTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285E814CE0B4300D02672 /* SNRHUDTextView.m */; };
-		039285ED14CE0B8600D02672 /* SNRHUDScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285EB14CE0B8500D02672 /* SNRHUDScrollView.h */; };
+		039285ED14CE0B8600D02672 /* SNRHUDScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285EB14CE0B8500D02672 /* SNRHUDScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		039285EE14CE0B8600D02672 /* SNRHUDScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285EC14CE0B8500D02672 /* SNRHUDScrollView.m */; };
-		039285F114CE0C1100D02672 /* SNRHUDImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285EF14CE0C1000D02672 /* SNRHUDImageCell.h */; };
+		039285F114CE0C1100D02672 /* SNRHUDImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 039285EF14CE0C1000D02672 /* SNRHUDImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		039285F214CE0C1100D02672 /* SNRHUDImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 039285F014CE0C1000D02672 /* SNRHUDImageCell.m */; };
 /* End PBXBuildFile section */
 
@@ -227,13 +227,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0392859714CCCC4B00D02672 /* SNRHUDSegmentedCell.h in Headers */,
-				039285CE14CCE82700D02672 /* NSBezierPath+MCAdditions.h in Headers */,
 				039285D214CCF39B00D02672 /* SNRHUDWindow.h in Headers */,
 				039285D614CDE58800D02672 /* SNRHUDTextFieldCell.h in Headers */,
 				039285E514CE007100D02672 /* SNRHUDButtonCell.h in Headers */,
 				039285E914CE0B4300D02672 /* SNRHUDTextView.h in Headers */,
 				039285ED14CE0B8600D02672 /* SNRHUDScrollView.h in Headers */,
 				039285F114CE0C1100D02672 /* SNRHUDImageCell.h in Headers */,
+				039285CE14CCE82700D02672 /* NSBezierPath+MCAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +452,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SNRHUDKit/SNRHUDKit-Prefix.pch";
 				INFOPLIST_FILE = "SNRHUDKit/SNRHUDKit-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -466,6 +468,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SNRHUDKit/SNRHUDKit-Prefix.pch";
 				INFOPLIST_FILE = "SNRHUDKit/SNRHUDKit-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -512,6 +516,7 @@
 				0392859414CCCBF300D02672 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		039285C314CCD40500D02672 /* Build configuration list for PBXNativeTarget "Catalog" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +525,7 @@
 				039285C514CCD40500D02672 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

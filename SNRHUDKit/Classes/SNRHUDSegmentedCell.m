@@ -38,7 +38,11 @@
 #define SNRSegControlTextShadowBlurRadius        1.f
 #define SNRSegControlTextShadowColor             [NSColor blackColor]
 
-#define SNRSegControlDisabledAlpha               0.7f
+#define SNRSegControlDisabledAlpha               0.5f
+
+#define SNRSegControlXEdgeMargin                 10.f
+#define SNRSegControlYEdgeMargin                 5.f
+#define SNRSegControlImageLabelMargin            5.f
 
 // This is a value that is set internally by AppKit, used for layout purposes in this code
 // Don't change this
@@ -48,7 +52,7 @@
 // Returns the bezier path that the border was drawn in
 - (NSBezierPath*)snr_drawBackgroundWithFrame:(NSRect)cellFrame inView:(NSView*)controlView;
 - (NSRect)snr_widthForSegment:(NSInteger)segment;
-- (void)snr_drawInteriorOfSegment:(NSInteger)segment inFrame:(NSRect)frame;
+- (void)snr_drawInteriorOfSegment:(NSInteger)segment inFrame:(NSRect)frame inView:(NSView*)controlView;
 @end
 
 @implementation SNRHUDSegmentedCell
@@ -136,9 +140,9 @@
         NSBezierPath *path = [NSBezierPath bezierPathWithRect:frame];
         [path fillWithInnerShadow:innerShadow];
     }
-    [self snr_drawInteriorOfSegment:segment inFrame:frame];
+    [self snr_drawInteriorOfSegment:segment inFrame:frame inView:controlView];
     NSEvent *currentEvent = [NSApp currentEvent]; // This is probably a dirty way of figuring out whether to highlight
-    if (currentEvent.type == NSLeftMouseDown) {
+    if (currentEvent.type == NSLeftMouseDown && [self isEnabledForSegment:segment]) {
         NSPoint location = [controlView convertPoint:[currentEvent locationInWindow] fromView:nil];
         if (NSPointInRect(location, frame)) {
             [SNRSegControlHighlightOverlayColor set];
@@ -156,10 +160,18 @@
     }
 }
 
-- (void)snr_drawInteriorOfSegment:(NSInteger)segment inFrame:(NSRect)frame
+- (void)snr_drawInteriorOfSegment:(NSInteger)segment inFrame:(NSRect)frame inView:(NSView*)controlView
 {
     BOOL selected = [self isSelectedForSegment:segment];
     NSString *label = [self labelForSegment:segment];
+    NSImage *image = [self imageForSegment:segment];
+    NSRect imageRect = NSZeroRect;
+    if (image) {
+        NSSize imageSize = [image size];
+        CGFloat maxImageHeight = frame.size.height - (SNRSegControlYEdgeMargin * 2.f);
+        CGFloat imageHeight = MIN(maxImageHeight, imageSize.height);
+        imageRect = NSMakeRect(round(NSMidX(frame) - (imageSize.width / 2.f)), round(NSMidY(frame) - (imageHeight / 2.f)), imageSize.width, imageHeight);
+    }
     if (label) {
         NSShadow *textShadow = [NSShadow new];
         [textShadow setShadowOffset:selected ? SNRSegControlSelectedTextShadowOffset : SNRSegControlTextShadowOffset];
@@ -168,9 +180,18 @@
         NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:SNRSegControlTextFont, NSFontAttributeName, selected ? SNRSegControlSelectedTextColor : SNRSegControlTextColor, NSForegroundColorAttributeName, textShadow, NSShadowAttributeName, nil];
         NSAttributedString *attrLabel = [[NSAttributedString alloc] initWithString:label attributes:attributes];
         NSSize labelSize = attrLabel.size;
-        NSRect labelRect = NSMakeRect(NSMidX(frame) - (labelSize.width / 2.f), NSMidY(frame) - (labelSize.height / 2.f), labelSize.width, labelSize.height);
+        if (image) {
+            CGFloat totalContentWidth = labelSize.width + imageRect.size.width + SNRSegControlImageLabelMargin;
+            imageRect.origin.x = round(NSMidX(frame) - (totalContentWidth / 2.f));
+        }
+        NSRect labelRect = NSMakeRect((image == nil) ? (NSMidX(frame) - (labelSize.width / 2.f)) : (NSMaxX(imageRect) + SNRSegControlImageLabelMargin), NSMidY(frame) - (labelSize.height / 2.f), labelSize.width, labelSize.height);
         [attrLabel drawInRect:NSIntegralRect(labelRect)];
     }
+    NSImageCell *imageCell = [[NSImageCell alloc] init];
+    [imageCell setImage:image];
+    [imageCell setImageScaling:[self imageScalingForSegment:segment]];
+    [imageCell setHighlighted:[self isHighlighted]];
+    [imageCell drawWithFrame:imageRect inView:controlView];
 }
 
 - (NSRect)snr_widthForSegment:(NSInteger)segment

@@ -9,7 +9,6 @@
 #import <AppKit/AppKit.h>
 
 // TODO: Flexible automatic widths (fixed widths are required right now)
-// TODO: Drawing images
 
 @interface SNRHUDSegmentedCell : NSSegmentedCell
 
