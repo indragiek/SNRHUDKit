@@ -13,7 +13,7 @@ As of Xcode 4, IBPlugins are no longer supported. Therefore, you will need to ei
 * Window (`SNRHUDWindow`)
 * Segmented control (`SNRHUDSegmentedCell`)
 * Text view (`SNRHUDTextView`)
-* Basic rounded button (`SNRHUDButtonCell`)
+* Rounded and checkbox buttons (`SNRHUDButtonCell`)
 * Text field (`SNRHUDTextFieldCell`)
 
 Here's a mockup of what the complete set of elements will look like:
