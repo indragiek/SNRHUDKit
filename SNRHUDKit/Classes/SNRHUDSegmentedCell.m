@@ -80,6 +80,14 @@
     CGFloat currentOrigin = 0.0;
     for (NSInteger i = 0; i < segmentCount; i++) {
         CGFloat width = [self widthForSegment:i];
+        
+        // widthForSegment: returns 0 for autosized segments
+        // so we need to divide the width of the cell evenly between all the segments
+        // It will still break if one segment is much wider than the others
+        if (width == 0) {
+            width = (cellFrame.size.width - (SNRSegControlDivderWidth * (segmentCount - 1))) / segmentCount;
+        }
+        
         if (i != (segmentCount - 1)) {
             width += SNRSegControlDivderWidth;
         }

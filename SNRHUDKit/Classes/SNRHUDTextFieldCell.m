@@ -62,26 +62,33 @@
     }
     NSRect backgroundRect = cellFrame;
     backgroundRect.size.height -= 1.f;
+    
     NSBezierPath *backgroundPath = [NSBezierPath bezierPathWithRect:backgroundRect];
-    [SNRTextFieldBackgroundColor set];
-    [backgroundPath fill];
-    NSShadow *innerGlow = [NSShadow new];
-    [innerGlow setShadowColor:SNRTextFieldInnerGlowColor];
-    [innerGlow setShadowOffset:SNRTextFieldInnerGlowOffset];
-    [innerGlow setShadowBlurRadius:SNRTextFieldInnerGlowBlurRadius];
-    [backgroundPath fillWithInnerShadow:innerGlow];
-    NSRect innerShadowRect = NSInsetRect(backgroundRect, -2.f, 0.f);
-    innerShadowRect.size.height *= 2.f;
-    NSBezierPath *shadowPath = [NSBezierPath bezierPathWithRect:innerShadowRect];
-    NSShadow *innerShadow = [NSShadow new];
-    [innerShadow setShadowColor:SNRTextFieldInnerShadowColor];
-    [innerShadow setShadowOffset:SNRTextFieldInnerShadowOffset];
-    [innerShadow setShadowBlurRadius:SNRTextFieldInnerShadowBlurRadius];
-    [shadowPath fillWithInnerShadow:innerShadow];
-    NSRect dropShadowRect = backgroundRect;
-    dropShadowRect.origin.y = NSMaxY(cellFrame) - 1.f;
-    [SNRTextFieldDropShadowColor set];
-    [NSBezierPath fillRect:dropShadowRect];
+    
+    if ([self drawsBackground]) {
+        [SNRTextFieldBackgroundColor set];
+        [backgroundPath fill];
+    }
+    
+    if ([self isBezeled]) {
+        NSShadow *innerGlow = [NSShadow new];
+        [innerGlow setShadowColor:SNRTextFieldInnerGlowColor];
+        [innerGlow setShadowOffset:SNRTextFieldInnerGlowOffset];
+        [innerGlow setShadowBlurRadius:SNRTextFieldInnerGlowBlurRadius];
+        [backgroundPath fillWithInnerShadow:innerGlow];
+        NSRect innerShadowRect = NSInsetRect(backgroundRect, -2.f, 0.f);
+        innerShadowRect.size.height *= 2.f;
+        NSBezierPath *shadowPath = [NSBezierPath bezierPathWithRect:innerShadowRect];
+        NSShadow *innerShadow = [NSShadow new];
+        [innerShadow setShadowColor:SNRTextFieldInnerShadowColor];
+        [innerShadow setShadowOffset:SNRTextFieldInnerShadowOffset];
+        [innerShadow setShadowBlurRadius:SNRTextFieldInnerShadowBlurRadius];
+        [shadowPath fillWithInnerShadow:innerShadow];
+        NSRect dropShadowRect = backgroundRect;
+        dropShadowRect.origin.y = NSMaxY(cellFrame) - 1.f;
+        [SNRTextFieldDropShadowColor set];
+        [NSBezierPath fillRect:dropShadowRect];
+    }
     
     // Draw the text vertically centered
     NSSize textSize = [self cellSizeForBounds:cellFrame];
