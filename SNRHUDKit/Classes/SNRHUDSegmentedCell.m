@@ -199,6 +199,7 @@
     [imageCell setImage:image];
     [imageCell setImageScaling:[self imageScalingForSegment:segment]];
     [imageCell setHighlighted:[self isHighlighted]];
+    [imageCell setEnabled:[self isEnabled]];
     [imageCell drawWithFrame:imageRect inView:controlView];
 }
 
