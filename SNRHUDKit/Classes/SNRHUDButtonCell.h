@@ -8,7 +8,7 @@
 
 #import <AppKit/AppKit.h>
 
-// TODO: Drawing images
+// TODO: Drawing non-template images
 // TODO: Checkbox & radio buttons
 
 @interface SNRHUDButtonCell : NSButtonCell

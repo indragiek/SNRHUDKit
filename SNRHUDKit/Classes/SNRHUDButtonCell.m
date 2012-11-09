@@ -104,6 +104,8 @@ static NSString* const SNRButtonReturnKeyEquivalent = @"\r";
 {
     if (__buttonType == NSSwitchButton) {
         [self snr_drawCheckboxBezelWithFrame:frame inView:controlView];
+    } else if ([image isTemplate]) {
+        [super drawImage:image withFrame:frame inView:controlView];
     }
 }
 
